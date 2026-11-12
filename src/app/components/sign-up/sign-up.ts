@@ -74,17 +74,15 @@ export class SignUp {
      * Resets the form, clears saved data and navigates to the login page
      * if registration was successful.
      */
-    async signUp() {
+    signUp() {
         if (this.signUpForm.invalid) {
             return;
         }
         const formData = this.signUpForm.getRawValue();
-        const success = await this.authentication.signUpNewUser(formData.name, formData.email, formData.password);
-        if (success) {
-            this.signUpForm.reset();
-            SignUp.savedFormData = null;
-            this.navigateService.goTo('login');
-        }
+        const success = this.authentication.signUpNewUser(formData.name, formData.email, formData.password);
+        this.signUpForm.reset();
+        SignUp.savedFormData = null;
+        this.navigateService.goTo('login');
     }
 
     /**
