@@ -1,14 +1,14 @@
 .back-btn {
     width: 32px;
     height: 32px;
-    transition: 0.2s ease;
 
     img {
         width: 32px;
         height: 32px;
+        transition: 0.2s ease;
     }
 
-    &:hover {
+    &:hover img {
         transition: 0.2s ease;
         transform: translateX(-5px);
     }
