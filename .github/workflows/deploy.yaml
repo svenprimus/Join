@@ -10,7 +10,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/svenprimus/Join
+  IMAGE_NAME: ghcr.io/svenprimus/join
 
 jobs:
   build-and-deploy:
